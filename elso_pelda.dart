@@ -1,24 +1,43 @@
+import 'dart:io';
 void main() {
-    var firstName = "John";
-    var lastName = "Doe";
-    dynamic age = 22;
-    final lista = [1, 2, 3, 4, 5];
-    lista.add(age);
-    const fibo = [0, 1 , 2, 3, 4, 5];
-    print(lista);
-    print("Full name is $firstName $lastName");
-    int num1 = 10; //declaring number1
-    int num2 = 3; //declaring number2
-  
-// Calculation
-int sum = num1 + num2;
-int diff = num1 - num2;
-int mul = num1 * num2;
-double div = num1 / num2; // It is double because it outputs number with decimal.
-  
-// displaying the output
-print("The sum is $sum");
-print("The diff is $diff");
-print("The mul is $mul");
-print("The div is $div");
+  // print("Írj be egy számot:");
+  // int num1 = int.parse(stdin.readLineSync()!);
+  // print("Írj be egy másik számot:");
+  // int num2 = int.parse(stdin.readLineSync()!);
+  // if(num2 < num1){
+  //   int temporary = num1;
+  //   num1 = num2;
+  //   num2 = temporary;
+  // }
+  // for(int i = num1; i <= num2; i++){
+  //   if(i.isEven){
+  //     print("${i} páros");
+  //   }
+  //   else{
+  //     print("${i} páratlan");
+  //   }
+  // }
+List<String> uefa2024euro = [
+"Spain",
+"Germany",
+"Portugal",
+"France",
+"Netherlands",
+"Turkey",
+"England",
+"Switzerland"
+];
+  uefa2024euro.asMap().forEach((index, value) => print("$index, az ország pedig: $value"));
+
+  for(int i = 0; i < uefa2024euro.length - 1; i++){
+    for(int j = i + 1; j < uefa2024euro.length; j++){
+        print("${uefa2024euro[i]} - ${uefa2024euro[j]}");
+    }
 }
+print("Adj meg egy számot:");
+String szam = stdin.readLineSync()!;
+for(int i = 0; i < szam.length; i++){
+  int number = 
+}
+}
+
