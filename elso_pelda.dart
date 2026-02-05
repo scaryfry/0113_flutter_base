@@ -1,43 +1,31 @@
+import 'dart:ffi';
 import 'dart:io';
 void main() {
-  // print("Írj be egy számot:");
-  // int num1 = int.parse(stdin.readLineSync()!);
-  // print("Írj be egy másik számot:");
-  // int num2 = int.parse(stdin.readLineSync()!);
-  // if(num2 < num1){
-  //   int temporary = num1;
-  //   num1 = num2;
-  //   num2 = temporary;
-  // }
-  // for(int i = num1; i <= num2; i++){
-  //   if(i.isEven){
-  //     print("${i} páros");
-  //   }
-  //   else{
-  //     print("${i} páratlan");
-  //   }
-  // }
-List<String> uefa2024euro = [
-"Spain",
-"Germany",
-"Portugal",
-"France",
-"Netherlands",
-"Turkey",
-"England",
-"Switzerland"
-];
-  uefa2024euro.asMap().forEach((index, value) => print("$index, az ország pedig: $value"));
-
-  for(int i = 0; i < uefa2024euro.length - 1; i++){
-    for(int j = i + 1; j < uefa2024euro.length; j++){
-        print("${uefa2024euro[i]} - ${uefa2024euro[j]}");
-    }
+  print("Enter a number: ");
+  String number = stdin.readLineSync()!;
+  print(reverseInteger(number));
+  int num = 725;
+  print(sortNumbersDes(num));
+  var tomb = [1, 2, 4, 4, 3, 3, 1, 5, 3, "5"];
 }
-print("Adj meg egy számot:");
-String szam = stdin.readLineSync()!;
-for(int i = 0; i < szam.length; i++){
-  int number = 
+int reverseInteger(String input) {
+  String reversed = '';
+  for (int i = input.length - 1; i >= 0; i--) {
+    reversed += input[i];
+  }
+  return int.parse(reversed);
 }
+//A paraméterként kapott szám számjegyeit nagyság szerint csökkenően rendezi és egy egész számként adja vissza.
+int sortNumbersDes(int number){
+    var num = number.toString().split('');
+    num.sort((a, b) => b.compareTo(a),);
+    return int.parse(num.join());
 }
-
+// Adott egy tömb, keresd meg a tömbben lévő duplikátumokat, és adj vissza egy új tömböt
+//azokból a duplikátumokból. A visszaadott tömb elemeinek abban a sorrendben kell megjelenniük,
+//amelyben először duplikátumként jelentek meg („1” != 1).
+List<dynamic> duplicates(List<dynamic> arr){
+  for(int i = 0; i < arr.length; i++){
+    arr.removeWhere((item) => i == arr.)
+  }
+}
